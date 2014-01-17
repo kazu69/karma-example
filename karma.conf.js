@@ -14,8 +14,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'src/*.js',
-        'spec/*.js'
+        'src/*.[js|coffee]',
+        'spec/*.[js|coffee]'
     ],
 
 
@@ -23,6 +23,11 @@ module.exports = function(config) {
     exclude: [
       
     ],
+
+    // preprocessor
+    preprocessors: {
+        '**/*.coffee': ['coffee']
+    },
 
 
     // test results reporter to use
